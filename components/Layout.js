@@ -1,14 +1,20 @@
-import React from "react";
+import styled from "styled-components";
+import Footer from "./Footer";
 import Header from "./Header";
 
 const Layout = ({ children }) => {
 	return (
-		<div>
+		<>
 			<Header />
-			<main>{children}</main>
-			Footer here
-		</div>
+			<MainContainer>{children}</MainContainer>
+			<Footer />
+		</>
 	);
 };
 
 export default Layout;
+
+const MainContainer = styled.main`
+	padding: 1rem;
+	min-height: 85vh;
+`;
